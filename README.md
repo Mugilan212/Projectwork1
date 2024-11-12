@@ -1,59 +1,101 @@
-## Title of the Project
-Small description about the project like one below
-The integration of a chatbot within a hostel booking system, aimed at streamlining the reservation process for students and improving the overall user experience.
-
-## About
-<!--Detailed Description about the project-->
-Tailored Chatbot for Hostel Booking System is a project designed to integrate a chatbot that leverages advanced natural language processing techniques to understand and respond to user queries to the hostel booking system. Traditional hostel booking processes are often time-consuming and involve manual searches and extensive communication with hostel staff. This project seeks to overcome these challenges by creating an easy-to-use chatbot interface that assists students in addressing inquiries.
-
-## Features
-<!--List the features of the project as shown below-->
-- Implements advance neural network method.
-- A framework based application for deployment purpose.
-- High scalability.
-- Less time complexity.
-- A specific scope of Chatbot response model, using json data format.
-
-## Requirements
-<!--List the requirements of the project as shown below-->
-* Operating System: Requires a 64-bit OS (Windows 10 or Ubuntu) for compatibility with deep learning frameworks.
-* Development Environment: Python 3.6 or later is necessary for coding the sign language detection system.
-* Deep Learning Frameworks: TensorFlow for model training, MediaPipe for hand gesture recognition.
-* Image Processing Libraries: OpenCV is essential for efficient image processing and real-time hand gesture recognition.
-* Version Control: Implementation of Git for collaborative development and effective code management.
-* IDE: Use of VSCode as the Integrated Development Environment for coding, debugging, and version control integration.
-* Additional Dependencies: Includes scikit-learn, TensorFlow (versions 2.4.1), TensorFlow GPU, OpenCV, and Mediapipe for deep learning tasks.
-
-## System Architecture
-<!--Embed the system architecture diagram as shown below-->
-
-![Screenshot 2023-11-25 133637](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/a60c11f3-0a11-47fb-ac89-755d5f45c995)
+# Deepfake detection using Deep Learning (ResNext and LSTM)
 
 
-## Output
+</a>
 
-<!--Embed the Output picture at respective places as shown below as shown below-->
-#### Output1 - Name of the output
-
-![Screenshot 2023-11-25 134037](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/8c2b6b5c-5ed2-4ec4-b18e-5b6625402c16)
-
-#### Output2 - Name of the output
-![Screenshot 2023-11-25 134253](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/5e05c981-05ca-4aaa-aea2-d918dcf25cb7)
-
-Detection Accuracy: 96.7%
-Note: These metrics can be customized based on your actual performance evaluations.
+## Latest Update
+#### We have dockerised the [Django Application](https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/tree/master/Django%20Application) now you can spin up a container within seconds without worring about dependencies
 
 
-## Results and Impact
-<!--Give the results and impact as shown below-->
-The Sign Language Detection System enhances accessibility for individuals with hearing and speech impairments, providing a valuable tool for inclusive communication. The project's integration of computer vision and deep learning showcases its potential for intuitive and interactive human-computer interaction.
+## 1. Introduction
+This projects aims in detection of video deepfakes using deep learning techniques like ResNext and LSTM. We have achived deepfake detection by using transfer learning where the pretrained ResNext CNN is used to obtain a feature vector, further the LSTM layer is trained using the features. For more details follow the [documentaion](https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/tree/master/Documentation).
 
-This project serves as a foundation for future developments in assistive technologies and contributes to creating a more inclusive and accessible digital environment.
+You can also watch [this Youtube video](https://www.youtube.com/watch?v=_q16aJTXVRE) to get a better intuition about the project.
+You can watch [this playList](https://www.youtube.com/watch?v=quJ8Rv84oA0&list=PLNIj0dkfMA1FsD5xR4IEc8vdwr66_WExl) for step by step installation.
 
-## Articles published / References
-1. N. S. Gupta, S. K. Rout, S. Barik, R. R. Kalangi, and B. Swampa, “Enhancing Heart Disease Prediction Accuracy Through Hybrid Machine Learning Methods ”, EAI Endorsed Trans IoT, vol. 10, Mar. 2024.
-2. A. A. BIN ZAINUDDIN, “Enhancing IoT Security: A Synergy of Machine Learning, Artificial Intelligence, and Blockchain”, Data Science Insights, vol. 2, no. 1, Feb. 2024.
+You can read more about the project on <a href="https://abhijithjadhav.medium.com/deepfake-video-detection-using-long-short-term-memory-df3674f83ecc" target="_blank"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium" /></a>&nbsp;
 
 
+## 2. Directory Structure
+For ease of understanding the project is structured in below format
+```
+Deepfake_detection_using_deep_learning
+    |
+    |--- Django Application
+    |--- Model Creation
+    |--- Documentaion
+```
+1. Django Application 
+   - This directory consists of the django made application of our work. Where a user can upload the video and submit it to the model for prediction. The trained model performs the prediction and the result is displayed on the screen.
+2. Model Creation
+   - This directory consists of the step by step process of creating and training a deepfake detection model using our approach.
+3. Documentation
+   - This directory consists of all the documentation done during the project
+   
+## 3. System Architecture
+<p align="center">
+  <img src="https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/blob/master/github_assets/System%20Architecture.png" />
+</p>
 
+## 4. Demo 
+### You can watch the [youtube video](https://www.youtube.com/watch?v=_q16aJTXVRE&t=823s) for demo
 
+<p align="center">
+  <img src="https://github.com/abhijitjadhav1998/Deepfake_detection_using_deep_learning/blob/master/github_assets/fakegif.gif" />
+</p>
+
+## 5. Our Results
+
+| Model Name | No of videos | No of Frames | Accuracy |
+|------------|--------------|--------------|----------|
+|model_84_acc_10_frames_final_data.pt |6000 |10 |84.21461|
+|model_87_acc_20_frames_final_data.pt | 6000 |20 |87.79160|
+|model_89_acc_40_frames_final_data.pt | 6000| 40 |89.34681|
+|model_90_acc_60_frames_final_data.pt | 6000| 60 |90.59097 |
+|model_91_acc_80_frames_final_data.pt | 6000 | 80 | 91.49818 |
+|model_93_acc_100_frames_final_data.pt| 6000 | 100 | 93.58794|
+
+## 6. Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/abhijitjadhav1998/"><img src="https://avatars.githubusercontent.com/u/38549908?v=4?s=100" width="100px;" alt="Abhijit Jadhav"/><br /><sub><b>Abhijit Jadhav</b></sub></a><br /><a href="#projectManagement-abhijitjadhav1998" title="Project Management">📆</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://vthonte.vercel.app/"><img src="https://avatars.githubusercontent.com/u/43621438?v=4?s=100" width="100px;" alt="Vishwesh Thonte"/><br /><sub><b>Vishwesh Thonte</b></sub></a><br /><a href="#maintenance-vthonte" title="Maintenance">🚧</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+#### 6.1 Offline Contributors
+   1. Jay Patel
+   2. Hitendra Patil
+   3. Abhishek Patange
+   
+## 7. License
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+## 8. We welcome Open Source Contribution. 
+### Below are the some changes that can be applied to the project. New Ideas will be appreciated.
+- [ ] Deploying the applications in free cloud 
+- [ ] Creating open source API for detection
+- [ ] Batch processing of entire video instead of processing first 'x' frames.
+- [ ] Optimizing the code for faster execution.
+#### Completed 
+- [X] Dockerizing the app
+- [X] Enabling working of project on Non Cuda Computers. i.e on normal or AMD GPUs
